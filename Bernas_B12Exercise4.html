@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <style>
+      .navbar-toggler {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        transition: 0.5s ease-in-out;
+      }
+      .navbar-toggler,
+      .navbar-toggler:focus,
+      .navbar-toggler:active,
+      .navbar-toggler-icon:focus {
+        outline: none;
+        box-shadow: none;
+        border: 0;
+      }
+      .navbar-toggler span {
+        margin: 0;
+        padding: 0;
+      }
+      .toggler-icon {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #d3531a;
+        border-radius: 1px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25 ease-in-out;
+      }
+      .middle-bar {
+        margin-top: 0px;
+      }
+      /* when navigation is clicked */
+      .navbar-toggler .top-bar {
+        margin-top: 0px;
+        transform: rotate(135deg);
+      }
+      .navbar-toggler .middle-bar {
+        opacity: 0;
+        filter: alpha(opacity0);
+      }
+      .navbar-toggler .bottom-bar {
+        margin-top: 0px;
+        transform: rotate(-135deg);
+      }
+      /* State when the navbar is collapsed */
+
+      .navbar-toggler.collapsed .top-bar {
+        margin-top: -20px;
+        transform: rotate(0deg);
+      }
+      .navbar-toggler.collapsed .middle-bar {
+        opacity: 1;
+        filter: alpha(opacity=100);
+      }
+      .navbar-toggler.collapsed .bottom-bar {
+        margin-top: 20px;
+        transform: rotate(0deg);
+      }
+      /* Color of 3 lines */
+      .navbar-toggler.collapsed .toggler-icon {
+        background: linear-gradient(
+          263deg,
+          rgba(252, 74, 74, 1) 0%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+      .boxcolor {
+        background-color: gray;
+        border-radius: 20px;
+      }
+      
+    </style>
+  </head>
+  <body
+    style="
+      background: url(bacground1.jpg) repeat;
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+    "
+  >
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Start of NavBar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Photos</a></li>
+                <li><a class="dropdown-item" href="#">Images</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Gallery</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Nav Bar -->
+    <!--text end, start center and overflow-scroll for text-->
+    <div class="container-sm">
+      <div>
+      <div
+        class="d-sm-flex flex-row justify-content-around"
+        style=""
+      >
+        <div class="d-sm-flex flex-column boxcolor justify-content-center m-3">
+          <div class="d-flex flex-column boxcolor">
+            <img src="thumbnail.png" class="rounded-circle w-25 ms-auto p-2" />
+          </div>
+          <div class="lead p-4" style="text-align: justify">
+            <p class="mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+              nulla esse minima, magnam blanditiis eaque quidem ex deserunt
+              beatae nam doloribus unde aliquid ducimus tenetur facere non
+              accusantium odit animi?
+            </p>
+          </div>
+        </div>
+
+        <div class="d-sm-flex flex-column boxcolor justify-content-center m-3">
+          <div class="d-flex flex-column boxcolor">
+            <img src="thumbnail.png" class="rounded-circle w-25 m-auto p-2" />
+          </div>
+          <div class="lead p-4" style="text-align: justify">
+            <p class="mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+              nulla esse minima, magnam blanditiis eaque quidem ex deserunt
+              beatae nam doloribus unde aliquid ducimus tenetur facere non
+              accusantium odit animi?
+            </p>
+          </div>
+        </div>
+
+        <div class="d-sm-flex flex-column boxcolor justify-content-center m-3">
+          <div class="lead p-4" style="text-align: justify">
+            <p class="mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+              nulla esse minima, magnam blanditiis eaque quidem ex deserunt
+              beatae nam doloribus unde aliquid ducimus tenetur facere non
+              accusantium odit animi?
+            </p>
+          </div>
+          <div class="d-sm-flex my-auto ms-3">
+            <img src="thumbnail.png" class="rounded-circle w-25 m-auto p-2" />
+          </div>
+          
+      </div>
+
+    </div>
+    
+    <!-- 2nd container -->
+    <div>
+
+      <div
+        class="d-sm-flex flex-row justify-content-around"
+        style=""
+      >
+        <div class="d-sm-flex flex-column boxcolor justify-content-center m-3">
+          <div class="lead p-4" style="text-align: justify">
+            <p class="mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+              nulla esse minima, magnam blanditiis eaque quidem ex deserunt
+              beatae nam doloribus unde aliquid ducimus tenetur facere non
+              accusantium odit animi?
+            </p>
+          </div>
+          <div class="d-sm-flex flex-column boxcolor">
+            <img src="thumbnail.png" class="rounded-circle w-25 m-auto p-2" />
+          </div>
+          
+        </div>
+
+        <div class="d-sm-flex flex-column boxcolor justify-content-center m-3 flex-wrap-reverse">
+          <div class="d-flex flex-column boxcolor">
+            <img src="thumbnail.png" class="rounded-circle w-25 m-auto p-2" />
+          </div>
+          <div class="lead p-4" style="text-align: justify">
+            <p class="mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+              nulla esse minima, magnam blanditiis eaque quidem ex deserunt
+              beatae nam doloribus unde aliquid ducimus tenetur facere non
+              accusantium odit animi?
+            </p>
+          </div>
+        </div>
+
+        <div class="d-sm-flex flex-column boxcolor justify-content-center m-3">
+          <div class="d-flex my-auto ms-3">
+            <img src="thumbnail.png" class="rounded-circle w-25 me-auto p-2" />
+          </div>
+          <div class="lead p-4" style="text-align: justify">
+            <p class="mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+              nulla esse minima, magnam blanditiis eaque quidem ex deserunt
+              beatae nam doloribus unde aliquid ducimus tenetur facere non
+              accusantium odit animi?
+            </p>
+          </div>
+      </div>
+    </div>
+    </div>
+    <!-- end  -->
+  </body>
+</html>
